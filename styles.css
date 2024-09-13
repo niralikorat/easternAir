@@ -3,13 +3,14 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 .textBlue{
   color: #10219a;
 }
     
   .heroFull{
-    background-color: rgb(201, 201, 201);
+    background-color: rgba(245, 245, 245, 0.57);
   }
 .plane{
     max-width: 132px;
@@ -85,28 +86,47 @@ align-items: center;
   .logo{
     width: 100px;
   }
-  nav{
+  .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding: 20px 260px;
+  }
+  li{
+    list-style: none;
+  }
+  .logoQuote{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
   }
   .headingHero{
 font-size: 60px;
 max-width: 600px;
-color: rgb(46, 46, 46);
+color: #10219a;
 margin-bottom: 12px;
   }
   .headingHighlight{
-    color: rgb(113, 165, 36);
+    color: #20994d;
   }
 
   .btn-1{
     background: #10219a;
-    padding: 12px 12px;
+    padding: 20px 30px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+    border-radius: 8px;
+  }
+  .btn-2{
+    background: #20994d;
+    padding: 20px 30px;
+    font-weight: bold;
+    font-size: 20px;
     text-decoration: none;
     color: white;
     width: fit-content;
@@ -144,13 +164,13 @@ margin-bottom: 12px;
    
   }
   section{
-    padding: 80px 260px;
+    padding: 120px 260px;
     display: flex;
     /* justify-content: center; */
-    background-color: rgba(201, 201, 201, 0.733);
+    /* background-color: rgba(201, 201, 201, 0.733); */
   }
   .heading-2{
-    font-size: 48px;
+    font-size: 56px;
 max-width: fit-content;
 
   }
@@ -164,6 +184,17 @@ max-width: fit-content;
 
     100% { opacity: 1;}
   }
+  nav{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    gap: 36px;
+    align-items: center;
+    /* padding: 20px 20px; */
+  }
+  nav li{
+    font-size: 20px;
+  }
   @media (max-width:700px){
     /* .plane{
         max-width: 200px;
@@ -175,6 +206,8 @@ max-width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* align-items: center; */
+  gap: 60px;
  
     }
     .headingHero{
@@ -183,13 +216,7 @@ max-width: fit-content;
       color: rgb(46, 46, 46);
       margin-bottom: 12px;
         }
-    nav{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 20px;
-    }
+   
     nav p{
       display: none;
     }
@@ -215,8 +242,8 @@ max-width: fit-content;
 
   }
     .heroGraphicContainer{
-      width: 400px;
-      height: 400px;
+      width: 100%;
+      max-height: 600px;
       background: #10209ab6;
       margin-top: 12px;
       
@@ -238,12 +265,13 @@ max-width: fit-content;
     padding: 80px 20px;
     display: flex;
     /* justify-content: center; */
-    background-color: rgba(201, 201, 201, 0.733);
+    background-color: rgb(255, 255, 255);
+    /* filter: brightness(1.75); */
   }
   .serviceContainer{
     display: flex;
     flex-wrap: wrap;
-    gap: 120px;
+    gap: 60px;
     /* justify-content: center; */
     /* justify-content: space-evenly; */
   }
@@ -253,7 +281,16 @@ max-width: fit-content;
 
   }
 
- 
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 20px 20px;
+  }
+  nav{
+    display: none;
+  }
   }
 
 
@@ -261,27 +298,60 @@ max-width: fit-content;
 .serviceSection{
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   gap: 100px;
+  /* height: 70vh; */
 }
   .serviceContainer{
     display: flex;
-    flex-wrap: wrap;
-    gap: 120px;
+    flex-wrap: row;
+    gap: 60px;
     /* justify-content: center; */
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
   }
   .eachserviceBox{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 8px;
-    max-width: 200px;
-    text-align: start;
+    /* background-color: rgb(218, 218, 218); */
+    /* background-color: #acacacb6; */
+    background-size: 0% 0%;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 360px;
+    border-radius: 24px;
+    position: relative; /* Ensure the box has a relative positioning for better control */
+    overflow: hidden; /* Ensure the border is clipped to the box */
+    border: 2px solid transparent; 
+  }
+ 
+  .eachserviceBox:hover{
+    background-size: 100% 100%;
+    animation-name: borderAnimation;
+    /* background-color: rgba(36, 81, 165, 0.7); */
+    background-position: top left;
+    border-width: 2px; /* Final border width on hover */
+  background-color: rgba(36, 81, 165, 0.4); /
+  }
+  @keyframes borderAnimation {
+    0%   { background-size: 0% 0%;}
+    25%  { background-size: 25% 25%;}
+    50%  { background-size: 50% 50%;}
+    100% { background-size: 100% 100%;}
+  }
+
+  .eachserviceBox div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    /* padding-left: 0px; */
   }
   .serviceIcon{
     max-width:56px;
+    padding: 20px;
+    /* background-color: rgb(113, 165, 36); */
+    max-width: 60px;
+    border-radius:  0 0 50px 0;
   }
   .subHeadingHeighlight{
     color: #10219a;
@@ -289,12 +359,26 @@ max-width: fit-content;
 
   }
   .serviceHeading{
-    color: #10219a;
-    font-weight: bolder;
-    font-size: large;
+    /* color: #10219a; */
+    /* font-weight: bolder; */
+    /* Apply gradient text color */
+
+  font-size: 2em; /* Adjust as needed */
+  font-weight: bold; /* Optional: adjust text weight for emphasis */
+  background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
+  -webkit-background-clip: text; /* For WebKit browsers */
+  -webkit-text-fill-color: transparent; /* Makes the text color transparent so the background shows through */
+  background-clip: text; /* For non-WebKit browsers */
+  color: transparent; /* Fallback color in case gradient doesn’t work */
+
+
+
+
+    font-size:xx-large;
+
   }
   .para-2{
-    font-size: 16px;
+    font-size: 22px;
     color:rgb(80, 80, 80) ;
    
   }
@@ -302,7 +386,7 @@ max-width: fit-content;
 /* priceSection */
 
   .priceSection{
-    background-color: #9e9e9e86;
+    background-color: #e4e4e433;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -346,42 +430,58 @@ justify-content: space-between;
     /* max-width: fit-content; */
   }
   .formContainer input{
-    padding: 8px;
+    padding: 20px;
     width: 200%;
   }
 
   .cta{
-    background: (90deg, #10219a 2%, rgb(113, 165, 36) 98%);
 
+    background: linear-gradient(90deg, rgba(25,25,249,1) 11%, rgba(69,247,136,1) 100%);
+  
     display: flex;
     flex-direction: column;
 align-items: center;
     gap: 40px;
-    color: rgb(46, 46, 46);
+    color: #fff;
     
   }
   .howItWorksSection{
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     gap: 60px;
   }
   .howItWorksContainer{
     display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    flex-direction: column;
     gap: 40px;
+  }
+
+  .howItWorksRow{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 400px;
+    align-items: center;
+  }
+  .howItWorksImg{
+    max-width: 400px;
   }
 
   .stepBox{
     display: flex;
     flex-direction: column;
     /* background-color: rgb(218, 218, 218); */
-    background-color: #acacacb6;
+    /* background-color: #acacacb6; */
+    background-size: 0% 0%;
     gap: 40px;
     justify-content: space-between;
-    max-width: 360px;
+    max-width: 600px;
     border-radius: 24px;
+    cursor: pointer;
+    border: 2px solid rgba(36, 81, 165, 0.7);
+    
   }
   .stepBox div{
     display: flex;
@@ -389,24 +489,41 @@ align-items: center;
     gap: 12px;
     padding: 20px;
   }
+
   .stepCount{
     font-weight: bolder;
     font-size: larger;
     padding: 20px;
-    background-color: rgb(113, 165, 36);
+    background-color: #20994d;
     max-width: fit-content;
-    border-radius:  0 0 50px 0;
+    border-radius:  24px 0 50px 0;
+   
     /* display: none; */
   }
   .stepBox:hover{
-    background: #fff;
+    /* background: rgb(113, 165, 36); */
+    background-size: 100% 100%;
+    animation-name: bgAnimation;
+    background-color: rgba(36, 81, 165, 0.7);
+    background-position: top left;
+  transition: background-size 10000ms ease-in-out;
+  }
+  .stepBoxBg{
+    background-color: rgba(36, 81, 165, 0.4);
   }
 
+  @keyframes bgAnimation {
+    0%   {   background-size: 0% 0%;}
+    25% {   background-size: 25% 25%;}
+    50% {   background-size: 50% 50%;}
+    100% {   background-size: 100% 100%;}
+  }
   .testimonialSection{
     display: flex;
     flex-direction: column;
     gap: 100px;
     /* justify-content: center; */
+    background-color: #f1f1f1;
     align-items: center;
   }
   .testimonialContainer{
@@ -426,7 +543,7 @@ align-items: center;
   .clientLogoSection{
     display: flex;
     flex-direction: column;
-    background-color: #acacacb6;
+    background-color: #dfdfdfb5;
     align-items: center;
     gap: 80px;
   }
@@ -442,6 +559,7 @@ align-items: center;
   .boxes{
     position: relative;
     left: 200px;
+    max-width: 300px;
     animation-name: boxAppear;
     animation-duration: 2s;
     transition: ease-out;
@@ -456,16 +574,53 @@ align-items: center;
 .van{
   position: relative;
   left: 100px;
+  max-width: 400px;
+  
+}
+.vanAnimation{
   animation-name: vanComing;
-  animation-duration: 4s;
+  animation-duration: 2s;
   transition: ease-in;
 }
 @keyframes vanComing {
   0%   {  left: 1000px; opacity: 1;}
   /* 10%   {  left: 900px; opacity: 1;} */
-  100% { left: 100px; opacity: 1;}
+  100% { left: 0px; opacity: 1;}
 }
+
   @media (max-width:700px){
+    .boxes{
+      position: relative;
+      left: 0px;
+      max-width: 300px;
+      animation-name: boxAppear;
+      animation-duration: 2s;
+      transition: ease-out;
+      /* translate: 50px 100px; */
+    }
+    /* @keyframes boxAppear {
+      0%   {  bottom: 1200px; opacity: 0;}
+      10%   {  bottom: 900px; opacity: 1;}
+      100% { bottom: 0px; opacity: 1;}
+    } */
+  
+  .van{
+    position: relative;
+    left: 0px;
+    max-width: 400px;
+    
+  }
+  .vanAnimation{
+    animation-name: vanGoing;
+    animation-duration: 2s;
+    transition: ease-in;
+  }
+  @keyframes vanGoing {
+    0%   {  left: -500px; opacity: 1;}
+    /* 10%   {  left: 900px; opacity: 1;} */
+    100% { left: 0px; opacity: 1;}
+  }
+  
     .priceSecContainer{
       flex-direction: column;
     }
@@ -481,4 +636,41 @@ align-items: center;
       /* align-items: start; */
       justify-content:flex-start;
     }
+    .howItWorksRow{
+      display: flex;
+      flex-direction: column;
+      /* justify-content: space-between; */
+      gap: 200px;
+      align-items: center;
+    }
+    .stepBoxPara{
+      display: none;
+      transition: all 0.5s ease;
+    }
+    .logoQuote{
+      gap: 2px;
+      align-items: center;
+    }
+    .logoText{
+      max-width: 180px;
+    }
   }
+  @media (min-width: 700px) and (max-width: 1200px) {
+    .hero {
+      padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 100px;
+      align-items: start;
+    }
+    .header{
+      padding: 20px 40px;
+      gap: 12px;
+    }
+    nav{
+      display: none;
+    }
+  }
+
+  

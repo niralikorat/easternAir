@@ -5,28 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
 </head>
 <body>
     <div class="heroFull">
-        <nav>
-            <img src="https://shipeac.com/img/Eac_logo.jpg" class="logo" alt="logo">
+        <div class="header">
+            <div class="logoQuote">   <img src="https://shipeac.com/img/Eac_logo.jpg" class="logo" alt="logo">
      
-            <p class="para-1">Send your corrier anytime-anywhere !!!</p>
+                <p class="para-1 logoText">Send your corrier anytime-anywhere !!!</p>
+            </div>
+        <nav>
+            <li>Services</li>
+            <li>Product</li>
+            <li>Pricing</li>
+            <a href="" class="btn-2">Track Order</a>
         </nav>
-       
+    </div>
         <div class="hero">
             <!-- <img src="plane.png" class="plane">
             
             -->
-            <div class="heroTextContainer">
-          <h2 class="headingHero">Fast and Reliable <span class="headingHighlight">Parcel</span>
-            Delivery from <span class="headingHighlight">India to USA</span> </h2>
-            <p class="para-1">Serving the West Coast and Central North
-                America.</p>
-            <a href="" class="btn-1">Get Quote</a>
-        </div>
-        <img src="parcel.png" class="parcel">
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="heroTextContainer">
+                    <h2 class="headingHero">Fast and Reliable <span class="headingHighlight">Parcel</span>
+                      Delivery from <span class="headingHighlight">India to USA</span> </h2>
+                      <p class="para-1">Serving the West Coast and Central North
+                          America.</p>
+                      
+                  </div>
+                  <a href="" class="btn-1">Get Quote</a>
+            </div>
+         
+        <!-- <img src="parcel.png" class="parcel"> -->
         <div class="heroGraphicContainer">
             <img src="plane.png" class="plane">
             
@@ -38,50 +51,39 @@
         </div>
         </div>
     
-    </div>
+   
     <section class="serviceSection">
-<h3 class="heading-2 headingHighlight animate-on-scroll" style="max-width: 740px;"><span class=" subHeadingHeighlight">Fast and Secure Shipments</span> for All Your Needs</h3>
+<h3 class="heading-2 headingHighlight animate-on-scroll" ><span class=" subHeadingHeighlight">Fast and Secure Shipments</span> for All Your Needs</h3>
 <div class="serviceContainer">
-    <div class="eachserviceBox animate-on-scroll">
-        <img class="serviceIcon" src="icons/s1.png" >
-        <p class="serviceHeading">International Delivery</p>
-        <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
+    <div class="eachserviceBox">
+        <!-- <p class="">2</p> -->
+        <img class="serviceIcon " src="icons/s1.png" >
+        <div class="">
+            <p class="serviceHeading">International Delivery</p>
+            <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
+        </div>
+       
     </div>
-    <div class="eachserviceBox animate-on-scroll">
-        <img class="serviceIcon" src="icons/s2.png" >
-        <p class="serviceHeading">International Delivery</p>
-        <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
+    <div class="eachserviceBox">
+        <!-- <p class="">2</p> -->
+        <img class="serviceIcon " src="icons/s2.png" >
+        <div>
+            <p class="serviceHeading">Connect Resources</p>
+            <p class="para-2">Create your account in just a few minutes. Enter your details and get started with a free trial.</p>
+        </div>
+       
     </div>
-    <div class="eachserviceBox animate-on-scroll">
-        <img class="serviceIcon" src="icons/s3.png" >
-        <p class="serviceHeading">International Delivery</p>
-        <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
+    <div class="eachserviceBox">
+        <!-- <p class="">2</p> -->
+        <img class="serviceIcon " src="icons/s3.png" >
+        <div>
+            <p class="serviceHeading">Connect Resources</p>
+            <p class="para-2">Create your account in just a few minutes. Enter your details and get started with a free trial.</p>
+        </div>
+       
     </div>
-    <div class="eachserviceBox animate-on-scroll">
-        <img class="serviceIcon" src="icons/s1.png" >
-        <p class="serviceHeading">International Delivery</p>
-        <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
-    </div>
-    <div class="eachserviceBox animate-on-scroll">
-        <img class="serviceIcon" src="icons/s2.png" >
-        <p class="serviceHeading">International Delivery</p>
-        <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
-    </div>
-    <div class="eachserviceBox animate-on-scroll">
-        <img class="serviceIcon" src="icons/s3.png" >
-        <p class="serviceHeading">International Delivery</p>
-        <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
-    </div>
-    <div class="eachserviceBox animate-on-scroll">
-        <img class="serviceIcon" src="icons/s2.png" >
-        <p class="serviceHeading">International Delivery</p>
-        <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
-    </div>
-    <div class="eachserviceBox animate-on-scroll">
-        <img class="serviceIcon" src="icons/s3.png" >
-        <p class="serviceHeading">International Delivery</p>
-        <p class="para-2">Global delivery solutions with reliable transit times and tracking.</p>
-    </div>
+  
+    
 </div>
     </section>
     <section class="priceSection">
@@ -104,8 +106,8 @@
         </div>
         <a href="" class="btn-1">Get Quote</a>
     </form>
-    <img src="boxes.png" width="300px" class="boxes">
-    <img src="van.png" class="van" width="400px">
+    <img src="boxes.png"  class="boxes">
+    <img src="van.png" class="van animateVan" >
 </div>
   
 
@@ -121,34 +123,33 @@
     </section>
     <section class="howItWorksSection">
         <h3 class="heading-2  headingHighlight" >How It Works</h3>
-        <div class="howItWorksContainer">
-            <div class="stepBox">
-                <p class="stepCount">1</p>
-                <div>
-                    <p class="serviceHeading">Sign Up</p>
-                    <p class="para-2">Create your account in just a few minutes. Enter your details and get started with a free trial.</p>
+        <div class="howItWorksRow">
+            <div class="howItWorksContainer">
+                <div class="stepBox" data-image="m1.png">
+                    <p class="stepCount">1</p>
+                    <div>
+                        <p class="serviceHeading">Schedule & Prepare</p>
+                        <p class="para-2 stepBoxPara">Log in to the EAC Self-Care Portal to schedule, prepare, and submit your shipment, including labels and necessary documents.</p>
+                    </div>
                 </div>
-               
-            </div>
-            <div class="stepBox">
-                <p class="stepCount">2</p>
-                <div>
-                    <p class="serviceHeading">Connect Your Resources</p>
-                    <p class="para-2">Create your account in just a few minutes. Enter your details and get started with a free trial.</p>
+                <div class="stepBox" data-image="m2.png">
+                    <p class="stepCount">2</p>
+                    <div>
+                        <p class="serviceHeading">Track Your Shipment</p>
+                        <p class="para-2 stepBoxPara">Use the portal or mobile app to track your shipment in real-time. For shipments to/from India, ensure KYC documents are submitted for customs clearance.</p>
+                    </div>
                 </div>
-               
-            </div>
-            <div class="stepBox">
-                <p class="stepCount">3</p>
-                <div>
-                    <p class="serviceHeading">Track Your Order</p>
-                    <p class="para-2">Create your account in just a few minutes. Enter your details and get started with a free trial.</p>
+                <div class="stepBox" data-image="m3.png">
+                    <p class="stepCount">3</p>
+                    <div>
+                        <p class="serviceHeading">Manage Billing Online</p>
+                        <p class="para-2 stepBoxPara">View and download invoices through the portal. Paper statements are no longer sent, supporting EAC’s green initiative.</p>
+                    </div>
                 </div>
-               
             </div>
-            
-            
+            <img src="m1.png" class="howItWorksImg" id="stepImage">
         </div>
+        
     </section>
     <section class="testimonialSection">
         <h3 class="heading-2  textBlue" >What Our Client Say</h3>
