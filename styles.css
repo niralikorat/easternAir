@@ -44,7 +44,8 @@
    z-index: 30;
 }
 @keyframes parcelAnimation {
-    0%   { right:100px; top:-100px; opacity: 1; scale: 1; }
+    0%   { right:100px; top:-100px; opacity: 0; scale: 0; }
+    20%   { right:100px; top:-90px; opacity: 1; scale: 1; }
     /* 25%  { left:200px; top:0px;} */
     /* 50%  {left:200px; top:200px;} */
     /* 75%  {left:0px; top:200px;} */
@@ -310,10 +311,10 @@ max-width: fit-content;
   .priceSecContainer{
     display: flex;
     flex-direction: row;
-    /* padding: 20px; */
-    border: 2px solid gainsboro;
-    justify-content: center;
-    /* max-width: fit-content; */
+justify-content: space-between;
+    /* border: 2px solid gainsboro; */
+    /* gap: 200px; */
+   
     border-radius: 24px;
   }
   .priceDetailBox{
@@ -346,7 +347,7 @@ max-width: fit-content;
   }
   .formContainer input{
     padding: 8px;
-    width: 40%;
+    width: 200%;
   }
 
   .cta{
@@ -438,9 +439,36 @@ align-items: center;
   .clientLogo{
     max-width: 120px;
   }
+  .boxes{
+    position: relative;
+    left: 200px;
+    animation-name: boxAppear;
+    animation-duration: 2s;
+    transition: ease-out;
+    /* translate: 50px 100px; */
+  }
+  /* @keyframes boxAppear {
+    0%   {  bottom: 1200px; opacity: 0;}
+    10%   {  bottom: 900px; opacity: 1;}
+    100% { bottom: 0px; opacity: 1;}
+  } */
 
-
+.van{
+  position: relative;
+  left: 100px;
+  animation-name: vanComing;
+  animation-duration: 4s;
+  transition: ease-in;
+}
+@keyframes vanComing {
+  0%   {  left: 1000px; opacity: 1;}
+  /* 10%   {  left: 900px; opacity: 1;} */
+  100% { left: 100px; opacity: 1;}
+}
   @media (max-width:700px){
+    .priceSecContainer{
+      flex-direction: column;
+    }
     .formContainer input{
       padding: 8px;
       width: 90%;
