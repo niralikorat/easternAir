@@ -422,6 +422,22 @@ align-items: center;
     gap: 12px;
     max-width: 600px;
   }
+  .clientLogoSection{
+    display: flex;
+    flex-direction: column;
+    background-color: #acacacb6;
+    align-items: center;
+    gap: 80px;
+  }
+  .logoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .clientLogo{
+    max-width: 120px;
+  }
 
 
   @media (max-width:700px){
