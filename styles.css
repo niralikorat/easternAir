@@ -111,20 +111,61 @@ margin-bottom: 12px;
   .headingHighlight{
     color: #20994d;
   }
+  .flagContainer{
+    display: flex;
+    justify-content: space-between;
+  }
+  .flag{
+    max-width: 140px;
+  }
 
   .btn-1{
     background: #10219a;
-    padding: 20px 30px;
+    padding: 18px 36px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     color: white;
     width: fit-content;
     border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px gray;
+  }
+  .btn-1:hover{
+    box-shadow: none;
   }
   .btn-2{
     background: #20994d;
-    padding: 20px 30px;
+    padding: 15px 30px;
+    /* font-weight: bold; */
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px gray;
+  }
+ .btn-2:hover{
+    background-color: #4b9466;
+    box-shadow: none;
+  }
+  .btn-3{
+    background: #20994d;
+    padding: 16px 24px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px gray;
+  }
+  .btn-3:hover{
+    background-color: #4b9466;
+    box-shadow: none;
+  }
+  .btn-4{
+    background: #10219a;
+    padding: 20px 20px;
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
@@ -135,12 +176,13 @@ margin-bottom: 12px;
   .para-1{
     color: rgb(46, 46, 46);
     font-size: 16px;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding-bottom: 24px;
   }
+  
   .heroGraphicContainer{
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 400px;
+    max-height: 400px;
     background: #10209ab6;
     display: flex;
     flex-direction: column;
@@ -149,7 +191,7 @@ margin-bottom: 12px;
    
     box-shadow: 5px 5px 5px 5px #8888888e;
     z-index: 10;
-    border-radius: 50px;
+    border-radius: 50%;
     animation-name: expand;
     animation-duration: 1s;
   }
@@ -170,7 +212,7 @@ margin-bottom: 12px;
     /* background-color: rgba(201, 201, 201, 0.733); */
   }
   .heading-2{
-    font-size: 56px;
+    font-size: 48px;
 max-width: fit-content;
 
   }
@@ -193,7 +235,8 @@ max-width: fit-content;
     /* padding: 20px 20px; */
   }
   nav li{
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 400;
   }
   @media (max-width:700px){
     /* .plane{
@@ -301,6 +344,7 @@ max-width: fit-content;
   align-items: center;
   gap: 100px;
   /* height: 70vh; */
+  background-color: #fff;
 }
   .serviceContainer{
     display: flex;
@@ -324,14 +368,14 @@ max-width: fit-content;
     border: 2px solid transparent; 
   }
  
-  .eachserviceBox:hover{
+  /* .eachserviceBox:hover{
     background-size: 100% 100%;
     animation-name: borderAnimation;
-    /* background-color: rgba(36, 81, 165, 0.7); */
+
     background-position: top left;
-    border-width: 2px; /* Final border width on hover */
+    border-width: 2px;
   background-color: rgba(36, 81, 165, 0.4); /
-  }
+  } */
   @keyframes borderAnimation {
     0%   { background-size: 0% 0%;}
     25%  { background-size: 25% 25%;}
@@ -359,12 +403,10 @@ max-width: fit-content;
 
   }
   .serviceHeading{
-    /* color: #10219a; */
-    /* font-weight: bolder; */
-    /* Apply gradient text color */
 
-  font-size: 2em; /* Adjust as needed */
-  font-weight: bold; /* Optional: adjust text weight for emphasis */
+
+  font-size: 1.5rem; 
+ 
   background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
   -webkit-background-clip: text; /* For WebKit browsers */
   -webkit-text-fill-color: transparent; /* Makes the text color transparent so the background shows through */
@@ -374,11 +416,11 @@ max-width: fit-content;
 
 
 
-    font-size:xx-large;
+    /* font-size:xx-large; */
 
   }
   .para-2{
-    font-size: 22px;
+    font-size: 18px;
     color:rgb(80, 80, 80) ;
    
   }
@@ -430,7 +472,7 @@ justify-content: space-between;
     /* max-width: fit-content; */
   }
   .formContainer input{
-    padding: 20px;
+    padding: 12px;
     width: 200%;
   }
 
@@ -440,7 +482,7 @@ justify-content: space-between;
   
     display: flex;
     flex-direction: column;
-align-items: center;
+/* align-items: center; */
     gap: 40px;
     color: #fff;
     
@@ -452,6 +494,7 @@ align-items: center;
     gap: 60px;
   }
   .howItWorksContainer{
+    width: 50%;
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: column;
@@ -461,9 +504,15 @@ align-items: center;
   .howItWorksRow{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
+    /* justify-content:  */
     gap: 400px;
     align-items: center;
+  }
+  .mockUpBox{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .howItWorksImg{
     max-width: 400px;
@@ -475,7 +524,7 @@ align-items: center;
     /* background-color: rgb(218, 218, 218); */
     /* background-color: #acacacb6; */
     background-size: 0% 0%;
-    gap: 40px;
+    /* gap: 40px; */
     justify-content: space-between;
     max-width: 600px;
     border-radius: 24px;
@@ -510,6 +559,8 @@ align-items: center;
   }
   .stepBoxBg{
     background-color: rgba(36, 81, 165, 0.4);
+    box-shadow: 8px 8px 8px 8px solid black;
+    z-index: 20;
   }
 
   @keyframes bgAnimation {
@@ -537,8 +588,13 @@ align-items: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
     max-width: 600px;
+  }
+  .testimonialClientName{
+    color: #353535;
+    font-size: 24px;
+    font-weight: bolder;
   }
   .clientLogoSection{
     display: flex;
@@ -555,6 +611,10 @@ align-items: center;
   }
   .clientLogo{
     max-width: 120px;
+  }
+  .calcAnimateBox{
+    display: flex;
+    gap: 100px;
   }
   .boxes{
     position: relative;
@@ -573,7 +633,7 @@ align-items: center;
 
 .van{
   position: relative;
-  left: 100px;
+  left: 140px;
   max-width: 400px;
   
 }
@@ -585,10 +645,15 @@ align-items: center;
 @keyframes vanComing {
   0%   {  left: 1000px; opacity: 1;}
   /* 10%   {  left: 900px; opacity: 1;} */
-  100% { left: 0px; opacity: 1;}
+  100% { left: 140px; opacity: 1;}
 }
 
   @media (max-width:700px){
+    .calcAnimateBox{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
     .boxes{
       position: relative;
       left: 0px;
@@ -636,11 +701,22 @@ align-items: center;
       /* align-items: start; */
       justify-content:flex-start;
     }
+    .mockUpBox{
+      width: 100%;
+   
+    }
+    .howItWorksContainer{
+      width: 100%;
+      display: flex;
+      /* flex-wrap: wrap; */
+      flex-direction: column;
+      gap: 40px;
+    }
     .howItWorksRow{
       display: flex;
       flex-direction: column;
       /* justify-content: space-between; */
-      gap: 200px;
+      gap: 120px;
       align-items: center;
     }
     .stepBoxPara{
