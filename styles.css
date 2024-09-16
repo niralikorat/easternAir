@@ -8,21 +8,47 @@
 .textBlue{
   color: #10219a;
 }
+.textGrayHeading{
+  color: #252525;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.textGreenSubHeading{
+  color: #20994d;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.textGraySubHeading{
+  color: #252525;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.textGray{
+  color: #1a1a1a;
+}
+.headingTextSize{
+  font-size: 48px;
+}
+.textCenter{
+  text-align: center;
+}
     
   .heroFull{
-    background-color: rgba(245, 245, 245, 0.57);
+    background-color: (right rgba(245, 245, 245, 0.57)20%,rgba(245, 245, 245, 0.57)80%) rgba(245, 245, 245, 0.57);
   }
 .plane{
     max-width: 132px;
     position: relative;
   scale: 3;
     /* top:-150px; */
-    top:-50px;
-    left: 200px;
+    top:-100px;
+    left: -120px;
     margin-bottom: 100px;
     animation-name: example;
     animation-duration: 3s;
-    transition: ease-out;
+    transition: linear;
     /* opacity: 1; */
 }
 .planeBox{
@@ -54,9 +80,9 @@
   }  
 
   @keyframes example {
-    0%   { left:-100px; top:0px; opacity: 1;}
+    0%   { left:-400px; top:0px; opacity: 1;}
 
-    100% { left:200px; top:-50px; opacity: 1;}
+    100% { left:-120px; top:-100px; opacity: 1;}
   }
  
 
@@ -74,7 +100,7 @@
     padding: 80px 260px;
 display: flex;
 flex-direction: row;
-justify-content: space-between;
+/* justify-content: space-between; */
 align-items: center;
   }
   /* .peopleBox{
@@ -93,6 +119,20 @@ align-items: center;
     /* align-items: center; */
     padding: 20px 260px;
   }
+  .trackPopUPContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .trackPopUP{
+    display: none;
+    position: relative;
+    top: 80px;
+    right: 40px;
+  }
+  .trackPopUPContainer:hover .trackPopUP {
+    display: block;
+  }
   li{
     list-style: none;
   }
@@ -105,7 +145,7 @@ align-items: center;
   .headingHero{
 font-size: 60px;
 max-width: 600px;
-color: #10219a;
+color: #252525;
 margin-bottom: 12px;
   }
   .headingHighlight{
@@ -181,9 +221,14 @@ margin-bottom: 12px;
   }
   
   .heroGraphicContainer{
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 600px;
+    max-height: 600px;
     background: #10209ab6;
+    background-image: url('https://img.freepik.com/free-vector/illustration-india-flag_53876-27130.jpg?uid=R159712361&ga=GA1.2.2002463589.1721469257&semt=ais_hybrid'), url('https://img.freepik.com/premium-vector/american-flag-usa-vector-illustration-vector-flag-usa-united-states-coloured-usa-flag-vector_750724-19387.jpg?uid=R159712361&ga=GA1.2.2002463589.1721469257&semt=ais_hybrid');
+    background-position: left top, right top; /* Positions for both images */
+    background-repeat: no-repeat, no-repeat; /* Prevent images from repeating */
+    background-size: contain, contain; /* Set sizes for both images */
+    /* background-image: url('https://img.freepik.com/free-psd/earth-ball-planet-isolated_23-2151797609.jpg?uid=R159712361&ga=GA1.2.2002463589.1721469257&semt=ais_hybrid'); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -191,7 +236,7 @@ margin-bottom: 12px;
    
     box-shadow: 5px 5px 5px 5px #8888888e;
     z-index: 10;
-    border-radius: 50%;
+    border-radius: 8%;
     animation-name: expand;
     animation-duration: 1s;
   }
@@ -218,13 +263,14 @@ max-width: fit-content;
   }
   .animateShowUp{
     animation-name: showUp;
-    animation-duration: 2s;
+    animation-duration: 1s;
+   
     transition: ease-out;
   }
   @keyframes showUp {
-    0%   {  opacity: 0;}
+    0%   { scale:0.5; opacity: 0;}
 
-    100% { opacity: 1;}
+    100% { scale:1; opacity: 1;}
   }
   nav{
     display: flex;
@@ -344,24 +390,24 @@ max-width: fit-content;
   align-items: center;
   gap: 100px;
   /* height: 70vh; */
-  background-color: #fff;
+  background-color: #e1e5ee;
 }
   .serviceContainer{
     display: flex;
-    flex-wrap: row;
+    flex-wrap: wrap;
     gap: 60px;
-    /* justify-content: center; */
+    justify-content: center;
     /* justify-content: space-evenly; */
   }
   .eachserviceBox{
     display: flex;
     flex-direction: column;
     /* background-color: rgb(218, 218, 218); */
-    /* background-color: #acacacb6; */
+    background-color: #fff;
     background-size: 0% 0%;
-    gap: 40px;
+    /* gap: 16px; */
     justify-content: space-between;
-    max-width: 360px;
+    max-width: 300px;
     border-radius: 24px;
     position: relative; /* Ensure the box has a relative positioning for better control */
     overflow: hidden; /* Ensure the border is clipped to the box */
@@ -393,9 +439,9 @@ max-width: fit-content;
   .serviceIcon{
     max-width:56px;
     padding: 20px;
-    /* background-color: rgb(113, 165, 36); */
+    /* background-color: rgba(113, 165, 36,0.9); */
     max-width: 60px;
-    border-radius:  0 0 50px 0;
+    /* border-radius:  0 0 50px 0; */
   }
   .subHeadingHeighlight{
     color: #10219a;
@@ -428,7 +474,7 @@ max-width: fit-content;
 /* priceSection */
 
   .priceSection{
-    background-color: #e4e4e433;
+    background-color: #e2e7f2d1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -438,6 +484,7 @@ max-width: fit-content;
     display: flex;
     flex-direction: row;
 justify-content: space-between;
+align-items: start;
     /* border: 2px solid gainsboro; */
     /* gap: 200px; */
    
@@ -488,7 +535,12 @@ justify-content: space-between;
     
   }
   .howItWorksSection{
-    background-color: rgb(255, 255, 255);
+
+    /* background-color: rgba(110, 113, 119, 1); */
+    /* background-image: url('https://img.freepik.com/premium-vector/decorative-line-white-background_189483-27.jpg?w=1380'); */
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -505,17 +557,45 @@ justify-content: space-between;
     display: flex;
     flex-direction: row;
     /* justify-content:  */
-    gap: 400px;
+    /* background-color: rgba(188, 196, 212, 0.4); */
+    gap: 300px;
     align-items: center;
+    border: 1px solid rgba(110, 113, 119, 0.4);
+    padding: 60px;
+    border-radius: 25px;
   }
   .mockUpBox{
-    width: 50%;
+    /* width: 36%; */
+    /* height: 10%; */
+    border-radius:50% 50% 0% 0%;
+    background-color: #10219a;
+    background-position: bottom;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 20;
+    box-shadow: 6px 6px 6px 6px solid grey;
+  }
+  .mockUpBox:hover{
+    /* animation: bgMockupAnimation 2s ease-in-out;  */
+    background-color: #20994d;
+  
+  }
+  @keyframes bgMockupAnimation{
+    0% {
+      transform: rotate(0deg); /* Initial rotation */
+      opacity: 0; /* Starting with opacity 0 */
+    }
+    100% {
+      transform: rotate(360deg); /* Full rotation */
+      opacity: 1; /* End with opacity 1 */
+    }
   }
   .howItWorksImg{
     max-width: 400px;
+    z-index: 20;
+    border-radius: 60px;
+    box-shadow: 0px 10px 10px 10px #02020252;
   }
 
   .stepBox{
@@ -529,7 +609,7 @@ justify-content: space-between;
     max-width: 600px;
     border-radius: 24px;
     cursor: pointer;
-    border: 2px solid rgba(36, 81, 165, 0.7);
+    border: 1px solid rgba(110, 113, 119, 0.1);
     
   }
   .stepBox div{
@@ -543,7 +623,7 @@ justify-content: space-between;
     font-weight: bolder;
     font-size: larger;
     padding: 20px;
-    background-color: #20994d;
+    /* background-color: #10209ab6; */
     max-width: fit-content;
     border-radius:  24px 0 50px 0;
    
@@ -553,14 +633,15 @@ justify-content: space-between;
     /* background: rgb(113, 165, 36); */
     background-size: 100% 100%;
     animation-name: bgAnimation;
-    background-color: rgba(36, 81, 165, 0.7);
+    background-color: rgba(173, 248, 197, 0.158);
     background-position: top left;
   transition: background-size 10000ms ease-in-out;
   }
   .stepBoxBg{
-    background-color: rgba(36, 81, 165, 0.4);
+    background-color: rgba(173, 248, 197, 0.658);
     box-shadow: 8px 8px 8px 8px solid black;
     z-index: 20;
+    border: 2px solid #07973c;
   }
 
   @keyframes bgAnimation {
@@ -614,12 +695,14 @@ justify-content: space-between;
   }
   .calcAnimateBox{
     display: flex;
-    gap: 100px;
+    /* gap: 100px; */
+    gap: 40px;
   }
   .boxes{
     position: relative;
-    left: 200px;
-    max-width: 300px;
+    left: 300px;
+    max-width: 400px;
+    scale: 0.5;
     animation-name: boxAppear;
     animation-duration: 2s;
     transition: ease-out;
@@ -634,13 +717,14 @@ justify-content: space-between;
 .van{
   position: relative;
   left: 140px;
-  max-width: 400px;
+  max-width: 500px;
+  /* scale: 1.2; */
   
 }
 .vanAnimation{
   animation-name: vanComing;
-  animation-duration: 2s;
-  transition: ease-in;
+  animation-duration: 4s;
+  transition: linear;
 }
 @keyframes vanComing {
   0%   {  left: 1000px; opacity: 1;}
@@ -716,6 +800,7 @@ justify-content: space-between;
       display: flex;
       flex-direction: column;
       /* justify-content: space-between; */
+      padding:24px ;
       gap: 120px;
       align-items: center;
     }
@@ -746,6 +831,9 @@ justify-content: space-between;
     }
     nav{
       display: none;
+    }
+    section{
+      padding: 20px 40px;
     }
   }
 
