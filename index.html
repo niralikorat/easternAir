@@ -85,18 +85,35 @@
     
     <div class="priceSecContainer">
         <form class="calculatorBox para-2">
-            <div class="formContainer">
-                <label for="pinCode">Pick-up Area Pincode</label>
-                <input type="number" placeholder="PIN Code">
+            <div class="rowBox">
+                <div class="formContainer">
+                    <label for="pinCode">Pick-up Area Pincode</label>
+                    <input type="number" placeholder="Enter 5 digit pickup area pincode">
+                </div>
+                <div class="formContainer">
+                    <label for="pinCode">Delivery Area Pincode</label>
+                    <input type="number" placeholder="Enter 5 digit delivery area pincode" name="pinCode">
+                </div>
             </div>
-            <div class="formContainer">
-                <label for="pinCode">Pick-up Area Pincode</label>
-                <input type="number" placeholder="PIN Code" name="pinCode">
+           
+            <div class="rowBox">
+                <div class="formContainer">
+                    <label for="weight">Weight</label>
+                    <input type="number" placeholder="Weight">
+                </div>
+                <div class="formContainer">
+                    <label for="parcelType">Parcel Type</label>
+                    <select name="parcelType" id="parcelType">
+                        <option value="document">Document</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
             </div>
-            <div class="formContainer">
+            <!-- <div class="formContainer">
                 <label for="Weight">Pick-up Area Pincode</label>
                 <input type="number" placeholder="Weight" name="Weight">
-            </div>
+            </div> -->
             <a href="" class="btn-3">Get Quote</a>
         </form>
         
@@ -285,7 +302,7 @@
     <section class="clientLogoSection">
         <div class="subHeadingBox">
             <p class="textGreenSubHeading inter-font">Partner and Affiliations</p>
-            <h3 class="heading-2  textGray inter-font" >We Work With Clients All Over The World.</h3>
+            <h3 class="heading-2  textGray inter-font" style="max-width: 600px; ">We Work With Clients All Over The World.</h3>
         </div>
         <!-- <h3 class="heading-2  textGray" > Partner and Affiliations</h3> -->
         <div class="logoContainer">
