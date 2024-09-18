@@ -101,9 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const burgerMenu = document.getElementById('burger-menu');
-const menu = document.getElementById('menu');
+const mobileNav = document.getElementById('mobileNav');
 
 burgerMenu.addEventListener('click', () => {
-  burgerMenu.classList.toggle('active');
-  menu.classList.toggle('hidden');
+  mobileNav.classList.toggle('active');  // Toggle the active class on the mobile nav
 });
