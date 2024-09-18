@@ -153,10 +153,13 @@ margin-bottom: 12px;
   }
   .flagContainer{
     display: flex;
-    justify-content: space-between;
+    gap: 16px;
+    /* padding: ; */
+    margin-bottom: 12px;
   }
   .flag{
-    max-width: 140px;
+    max-width: 64px;
+    border: 2px solid #d0cdf2
   }
 
   .btn-1{
@@ -390,7 +393,7 @@ max-width: fit-content;
   align-items: center;
   gap: 100px;
   /* height: 70vh; */
-  background-color: #e1e5ee;
+  background-color: #fff;
 }
   .serviceContainer{
     display: flex;
@@ -504,6 +507,7 @@ align-items: start;
     flex-direction: column;
   
     /* padding: 40px; */
+    width: 100%;
     gap: 20px;
     
   }
@@ -520,12 +524,12 @@ align-items: start;
   }
   .formContainer input{
     padding: 12px;
-    width: 200%;
+    max-width:600px 
   }
 
   .cta{
 
-    background: linear-gradient(90deg, rgba(25,25,249,1) 11%, rgba(69,247,136,1) 100%);
+    background:  rgb(143, 143, 238);
   
     display: flex;
     flex-direction: column;
@@ -655,22 +659,29 @@ align-items: start;
     flex-direction: column;
     gap: 100px;
     /* justify-content: center; */
-    background-color: #f1f1f1;
-    align-items: center;
+    background-color: #ecececc2;
+    /* align-items: start; */
   }
   .testimonialContainer{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
     gap: 20px;
+  }
+  .checked {
+    color: #20994d;
   }
   .testimonialBox{
     display: flex;
+    background-color: #fff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 600px;
+    max-width: 300px;
+    border: 1px solid gray;
+    padding: 40px;
+    border-radius: 24px;
   }
   .testimonialClientName{
     color: #353535;
@@ -679,16 +690,22 @@ align-items: start;
   }
   .clientLogoSection{
     display: flex;
-    flex-direction: column;
-    background-color: #dfdfdfb5;
+    flex-direction: row-reverse;
+    background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%);
     align-items: center;
     gap: 80px;
+  }
+  .subHeadingBox{
+    width: 30%;
+    border-left: 2px solid rgb(0, 0, 0);
+    padding-left: 40px;
   }
   .logoContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+   
   }
   .clientLogo{
     max-width: 120px;
@@ -814,6 +831,27 @@ align-items: start;
     }
     .logoText{
       max-width: 180px;
+    }
+    .testimonialContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* overflow-x: scroll; */
+      align-items: center;
+      gap: 20px;
+    }
+    .clientLogoSection{
+      display: flex;
+      flex-direction: column;
+      background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%);
+      align-items: center;
+      gap: 80px;
+    }
+    .subHeadingBox{
+      width: 100%;
+      border-left: none;
+      /* border-bottom: 1px solid rgb(0, 0, 0); */
+      padding-left: 40px;
     }
   }
   @media (min-width: 700px) and (max-width: 1200px) {
