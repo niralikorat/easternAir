@@ -202,7 +202,7 @@ margin-bottom: 12px;
     color: white;
     width: fit-content;
     border-radius: 8px;
-    box-shadow: 2px 2px 2px 2px gray;
+    /* box-shadow: 2px 2px 2px 2px gray; */
   }
  .btn-2:hover{
     background-color: #4b9466;
@@ -217,7 +217,7 @@ margin-bottom: 12px;
     color: white;
     width: fit-content;
     border-radius: 8px;
-    box-shadow: 2px 2px 2px 2px gray;
+    /* box-shadow: 2px 2px 2px 2px gray; */
   }
   .btn-3:hover{
     background-color: #4b9466;
@@ -735,7 +735,7 @@ align-items: start;
   .subHeadingBox{
     width: 30%;
     border-left: 2px solid rgb(0, 0, 0);
-    /* padding-left: 40px; */
+    padding-left: 40px;
   }
   .logoContainer{
     display: flex;
@@ -888,7 +888,7 @@ align-items: start;
       width: 100%;
       border-left: none;
       /* border-bottom: 1px solid rgb(0, 0, 0); */
-      /* padding-left: 40px; */
+      padding-left: 0px;
     }
   }
   @media (min-width: 1300px) and (max-width: 1500px) {
