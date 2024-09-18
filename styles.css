@@ -1100,7 +1100,44 @@ align-items: start;
   justify-content: space-between;
   align-items: start;
 }
+.menu-container {
+  display: none;
+  /* justify-content: flex-end; */
+}
 @media (max-width:700px){
+  .menu-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Styles for the burger menu button */
+  .menu-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    outline: none; /* Removes focus outline */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .menu-btn:focus {
+    outline: none; /* Further remove default focus */
+  }
+  
+  /* SVG icon styling */
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+    stroke: black; /* Default color */
+    transition: stroke 0.2s ease-in-out;
+  }
+  
+  /* Hover and focus styles */
+  .menu-btn:hover .menu-icon,
+  .menu-btn:focus .menu-icon {
+    stroke: #333; /* Darker stroke on hover/focus */
+    transform: scale(1.1); /* Slight scale on hover */
+  }
   .rowBox{
     display: flex;
     flex-direction: column;
@@ -1234,39 +1271,7 @@ align-items: start;
 
 
 /* Container for the menu button */
-.menu-container {
-  display: flex;
-  justify-content: flex-end;
-}
 
-/* Styles for the burger menu button */
-.menu-btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  outline: none; /* Removes focus outline */
-  transition: transform 0.2s ease-in-out;
-}
-
-.menu-btn:focus {
-  outline: none; /* Further remove default focus */
-}
-
-/* SVG icon styling */
-.menu-icon {
-  width: 24px;
-  height: 24px;
-  stroke: black; /* Default color */
-  transition: stroke 0.2s ease-in-out;
-}
-
-/* Hover and focus styles */
-.menu-btn:hover .menu-icon,
-.menu-btn:focus .menu-icon {
-  stroke: #333; /* Darker stroke on hover/focus */
-  transform: scale(1.1); /* Slight scale on hover */
-}
 .mobileNav {
   display: none; /* Initially hidden */
   background-color: #f9f9f9;
