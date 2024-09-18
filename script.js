@@ -96,3 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
     applyBehavior();
   });
 });
+
+
+
+
+const burgerMenu = document.getElementById('burger-menu');
+const menu = document.getElementById('menu');
+
+burgerMenu.addEventListener('click', () => {
+  burgerMenu.classList.toggle('active');
+  menu.classList.toggle('hidden');
+});
