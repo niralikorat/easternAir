@@ -1268,33 +1268,26 @@ align-items: start;
   transform: scale(1.1); /* Slight scale on hover */
 }
 .mobileNav {
-  display: none;
+  display: none; /* Initially hidden */
   background-color: #f9f9f9;
-  /* padding: 1rem; */
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
   padding-bottom: 40px; 
   position: absolute;
-  top: -400px; /* Adjust as per your layout */
+  top: -400px; /* Start hidden above */
   right: 0;
   width: 100%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   height: fit-content;
-  /* transition: 1s navAnimate linear; */
-  animation-name: navAnimate;
-  transition: top 1s  ease-in-out;
-}
-
-@keyframes navAnimate{
-  0%{top: -400px;}
-  100%{top: 90px;}
+  transition: top 1s ease-in-out; /* Smooth transition */
 }
 
 /* When the 'active' class is added, show the mobile nav */
 .mobileNav.active {
   display: flex;
-  top: 90px;
+  top: 90px; /* Slide to this position */
+
 }
 
 .mobileNav ul {
