@@ -959,14 +959,14 @@ align-items: center;
     .logoText{
       max-width: 180px;
     }
-    .testimonialContainer{
+    /* .testimonialContainer{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      /* overflow-x: scroll; */
+    
       align-items: center;
       gap: 20px;
-    }
+    } */
     .clientLogoSection{
       display: flex;
       flex-direction: column;
