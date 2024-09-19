@@ -106,3 +106,65 @@ const mobileNav = document.getElementById('mobileNav');
 burgerMenu.addEventListener('click', () => {
   mobileNav.classList.toggle('active');  // Toggle the active class on the mobile nav
 });
+
+
+
+let currentIndex = 0;
+const testimonials = document.querySelectorAll('.testimonialBox');
+const totalTestimonials = testimonials.length;
+let startX, endX;  // For swipe detection
+
+function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+        testimonial.style.transition = 'transform 0.5s ease';  // Smooth transition
+        testimonial.style.transform = `translateX(${(i - index) * 100}%)`;  // Move testimonials
+    });
+}
+
+function nextTestimonial() {
+  currentIndex = (currentIndex + 1) % totalTestimonials;  // Loop back to the first testimonial
+  showTestimonial(currentIndex);
+}
+
+function prevTestimonial() {
+  currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;  // Loop back to the last testimonial
+  showTestimonial(currentIndex);
+}
+
+// Auto-slide every 3 seconds (optional)
+const interval = setInterval(() => {
+    nextTestimonial();
+}, 3000);
+
+// Pause auto-slide when user clicks on navigation (optional)
+document.querySelector('.prev').addEventListener('click', () => {
+    clearInterval(interval);  // Optional: Clear auto-slide interval
+    prevTestimonial();
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    clearInterval(interval);  // Optional: Clear auto-slide interval
+    nextTestimonial();
+});
+
+// Swipe detection
+const testimonialContainer = document.querySelector('.testimonialWrapper');
+
+testimonialContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+testimonialContainer.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+});
+
+testimonialContainer.addEventListener('touchend', () => {
+    if (startX - endX > 50) {  // Swipe left
+        nextTestimonial();
+    } else if (endX - startX > 50) {  // Swipe right
+        prevTestimonial();
+    }
+});
+
+// Initial setup
+showTestimonial(currentIndex);

@@ -749,13 +749,22 @@ align-items: center;
     background-color: #e2e7f2d1;
     align-items: center;
   }
-  .testimonialContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
+  .testimonialContainer {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.testimonialWrapper {
+  display: flex;
+  overflow: hidden; /* Ensure that overflow is hidden */
+  width: 100%;
+}
+
+/* .testimonialBox {
+ 
+} */
+
   .checked {
     color: #20994d;
   }
@@ -766,11 +775,31 @@ align-items: center;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 600px;
-    /* border: 1px solid gray; */
-    padding: 40px;
+    min-width: 100%; /* Each testimonial takes up full width */
+    transition: transform 0.5s ease; /* Smooth transition */
+    /* padding: 40px; */
     border-radius: 24px;
   }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
   .testimonialClientName{
     color: #353535;
     font-size: 24px;
