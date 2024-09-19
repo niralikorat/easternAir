@@ -236,14 +236,15 @@ margin-bottom: 12px;
   .btn-5{
     background: #fff;
     padding: 18px 36px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
     text-decoration: none;
-    color: #10219a;
+    color: #000;
     /* width: 100%; */
     border-radius: 8px;
     text-align: center;
     max-width: 180px;
+    margin-top: 12px;
     /* box-shadow: 2px 2px 2px 2px gray; */
   }
   .btn-5:hover{
@@ -445,7 +446,7 @@ max-width: fit-content;
   align-items: center;
   gap: 100px;
   /* height: 70vh; */
-  background-color: #fff;
+  /* background-color: #d2daec57; */
 }
   .serviceContainer{
     display: flex;
@@ -530,6 +531,10 @@ max-width: fit-content;
 
   .priceSection{
     background-color: #e2e7f2d1;
+    background-image: url('bgCalculate.png');
+    background-position:  right 160px bottom ;
+    background-repeat: no-repeat;
+    background-size: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -591,19 +596,35 @@ align-items: start;
 
   .cta{
 
-    background:  #f5f5f5;
-  
+    background: linear-gradient(90deg, rgba(25, 25, 249, 0.6) 11%, rgba(0, 255, 96, 0.5) 100%);
+padding: 120px 260px;
     display: flex;
     flex-direction: column;
-/* align-items: center; */
+    justify-content: center;
+align-items: center;
     gap: 40px;
     color: black;
-    
+    /* max-width: 800px; */
+  /* align-items: center; */
+
+  }
+  .ctaBox{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    /* border: 1px solid rgba(110, 113, 119, 0.4); */
+    padding: 80px;
+    border-radius: 24px;
   }
   .howItWorksSection{
 
-    /* background-color: rgba(110, 113, 119, 1); */
-    /* background-image: url('https://img.freepik.com/premium-vector/decorative-line-white-background_189483-27.jpg?w=1380'); */
+    /* background-color: #fff; */
+    
+    background:rgba(134, 134, 134, 0.103), url('bgHowItWorks.jpg');
+    
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -617,6 +638,7 @@ align-items: start;
     /* flex-wrap: wrap; */
     flex-direction: column;
     gap: 40px;
+  
   }
 
   .howItWorksRow{
@@ -721,7 +743,7 @@ align-items: start;
     flex-direction: column;
     gap: 100px;
     /* justify-content: center; */
-    background-color: #ecececc2;
+    background-color: #e2e7f2d1;
     align-items: center;
   }
   .testimonialContainer{
@@ -1089,6 +1111,7 @@ align-items: start;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-top: 1px solid rgba(190, 190, 190, 0.575);;
 }
 
 
