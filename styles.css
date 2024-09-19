@@ -760,13 +760,13 @@ align-items: center;
   }
   .testimonialBox{
     display: flex;
-    background-color: #fff;
+    /* background-color: #fff; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 240px;
-    border: 1px solid gray;
+    max-width: 600px;
+    /* border: 1px solid gray; */
     padding: 40px;
     border-radius: 24px;
   }
