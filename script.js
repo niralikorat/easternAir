@@ -107,6 +107,9 @@ burgerMenu.addEventListener('click', () => {
   mobileNav.classList.toggle('active');  // Toggle the active class on the mobile nav
 });
 
+
+
+
 let currentIndex = 0;
 const testimonials = document.querySelectorAll('.testimonialBox');
 const totalTestimonials = testimonials.length;
@@ -114,9 +117,10 @@ let startX = 0, endX = 0;  // Swipe detection variables
 
 function showTestimonial(index) {
     testimonials.forEach((testimonial, i) => {
-        testimonial.style.opacity = (i === index) ? '1' : '0';  // Fade in/out
-        testimonial.style.zIndex = (i === index) ? '1' : '0';   // Ensure only the current testimonial is on top
-        testimonial.style.position = (i === index) ? 'relative' : 'absolute';  // Keep active one in flow
+        const offset = (i - index) * 100;  // Offset by 100% vertically for each testimonial
+        const pixelOffset = 40;  // 40px extra offset
+        testimonial.style.transform = `translateX(calc(${offset}%)`; 
+        testimonial.style.transition = 'transform 0.5s ease';  // Smooth transition
     });
 }
 
@@ -133,14 +137,16 @@ function prevTestimonial() {
 // Add event listeners for buttons
 document.querySelector('.prev').addEventListener('click', prevTestimonial);
 document.querySelector('.next').addEventListener('click', nextTestimonial);
-
+// const autoSlide = setInterval(() => {
+//   nextTestimonial();
+// }, 3000);
 // Swipe detection
 const testimonialContainer = document.querySelector('.testimonialWrapper');
-testimonialContainer.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
+testimonialContainer.addEventListener('touchstart', (e) => startX = e.touches[0].clientY);  // Changed to Y for vertical swipe
 testimonialContainer.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) nextTestimonial();   // Swipe left
-    if (endX - startX > 50) prevTestimonial();   // Swipe right
+    endX = e.changedTouches[0].clientY;  // Changed to Y for vertical swipe
+    if (startX - endX > 50) nextTestimonial();   // Swipe up
+    if (endX - startX > 50) prevTestimonial();   // Swipe down
 });
 
 // Initial display
