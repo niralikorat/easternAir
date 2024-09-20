@@ -1039,6 +1039,8 @@ align-items: center;
   }
   .bgCalculate{
     max-width: 300px;
+    /* z-index: ; */
+    scale: 1;
   }
     .priceSecContainer{
       flex-direction: column;
