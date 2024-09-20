@@ -16,13 +16,19 @@
 }
 .textGrayHeading{
   color: #252525;
-  font-size: 1.5rem;
+  font-size: 28px;
   font-weight: 500;
 }
 .textGreenSubHeading{
   color: #20994d;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
+  margin-bottom: 4px;
+}
+.textGreenSubHeading-2{
+  color: #20994d;
+  font-size: 16px;
+  font-weight: 400;
   margin-bottom: 4px;
 }
 .textGraySubHeading{
@@ -443,28 +449,29 @@ max-width: fit-content;
 .serviceSection{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   gap: 100px;
   /* height: 70vh; */
   /* background-color: #d2daec57; */
 }
   .serviceContainer{
     display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
+    flex-basis: calc(100% / 3 - 17px);
+    gap: 28px;
     justify-content: center;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
   }
   .eachserviceBox{
     display: flex;
     flex-direction: column;
     /* background-color: rgb(218, 218, 218); */
-    background-color: #fff;
+    background-color: #cecdff36;
     background-size: 0% 0%;
-    /* gap: 16px; */
-    justify-content: space-between;
-    max-width: 300px;
-    border-radius: 24px;
+    gap: 40px;
+    /* justify-content: space-between; */
+    padding: 40px;
+    max-width: 360px;
+    border-radius: 12px;
     position: relative; /* Ensure the box has a relative positioning for better control */
     overflow: hidden; /* Ensure the border is clipped to the box */
     border: 2px solid transparent; 
@@ -489,14 +496,14 @@ max-width: fit-content;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 20px;
+    /* padding: 20px; */
     /* padding-left: 0px; */
   }
   .serviceIcon{
-    max-width:56px;
-    padding: 20px;
+    max-width:100%;
+    /* padding: 20px; */
     /* background-color: rgba(113, 165, 36,0.9); */
-    max-width: 60px;
+    /* max-width: 60px; */
     /* border-radius:  0 0 50px 0; */
   }
   .subHeadingHeighlight{
@@ -507,7 +514,7 @@ max-width: fit-content;
   .serviceHeading{
 
 
-  font-size: 1.5rem; 
+  font-size: 28px; 
  
   background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
   -webkit-background-clip: text; /* For WebKit browsers */
@@ -522,15 +529,16 @@ max-width: fit-content;
 
   }
   .para-2{
-    font-size: 18px;
+    font-size: 20px;
     color:rgb(80, 80, 80) ;
+    line-height: 26px;
    
   }
 
 /* priceSection */
 
   .priceSection{
-    background-color: #e2e7f2d1;
+    background-color: #f8f8f8d8;
     /* background-image: url('bgCalculate.png'); */
     background-position:  right 160px bottom ;
     background-repeat: no-repeat;
@@ -744,62 +752,149 @@ align-items: center;
   .testimonialSection{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 100px;
     /* justify-content: center; */
-    background-color: #e2e7f2d1;
+    background-color: #fff;
     align-items: center;
   }
   .testimonialContainer {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    /* position: relative; */
+    /* max-width: 100%; */
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
 }
-.testimonialWrapper {
+.testimonialNavContainer{
   display: flex;
-  overflow: hidden; /* Ensure that overflow is hidden */
-  width: 100%;
+  flex-direction: column;
+  gap: 40px;
 }
+.testimonialBox {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;  /* Smooth fade-in and fade-out effect */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
+  width: 600px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  padding: 40px;
+  border-radius: 12px;
+  gap: 20px;
+}
+
+.testimonialBox:first-child {
+  position: relative;
+  opacity: 1;  /* First testimonial visible initially */
+  z-index: 1;
+}
+
+.testimonialWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  align-self: center;
+}
+
+
 
 /* .testimonialBox {
  
 } */
+ .comma{
+  opacity: 0.5;
+  max-width: 48px;
+ }
 
   .checked {
     color: #20994d;
   }
-  .testimonialBox{
+  /* .testimonialBox{
     display: flex;
-    /* background-color: #fff; */
+    background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    min-width: 100%; /* Each testimonial takes up full width */
-    transition: transform 0.5s ease; /* Smooth transition */
-    /* padding: 40px; */
+    min-width: 100%; 
+    transition: transform 0.5s ease; 
+
     border-radius: 24px;
-  }
-  .prev, .next {
+  } */
+  /* .testimonialBox{
+    display: flex;
+
+    background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%; 
+    transition: transform 0.5s ease; 
+    padding: 40px;
+
+    border-radius: 24px;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
+  } */
+  /* .testimonialBox:hover{
+    scale: 1.1;
+    transition: 0.2s ease-out;
+    background-color: ;
+  } */
+   .next {
+    cursor: pointer;
+    /* position: absolute; */
+    /* top: 50%; */
+    width: 24px;
+    height: 24px;
+    /* margin-top: -22px; */
     padding: 16px;
     color: black;
     font-weight: bold;
     font-size: 18px;
     user-select: none;
+    background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
+    border-radius: 100%;
 }
-
 .prev {
+  cursor: pointer;
+  /* position: absolute; */
+  /* top: 50%; */
+  width: 24px;
+  height: 24px;
+  /* margin-top: -22px; */
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+  background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
+  border-radius: 100%;
+}
+.prev:hover{
+  /* opacity: 0.5; */
+  scale: 1.1;
+}
+.next:hover{
+  /* opacity: 0.5; */
+  scale: 1.1;
+}
+/* .prev {
     left: 0;
 }
 
 .next {
     right: 0;
-}
+} */
   .testimonialClientName{
     color: #353535;
     font-size: 24px;
@@ -867,6 +962,38 @@ align-items: center;
 }
 
   @media (max-width:700px){
+    .testimonialNavContainer{
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+    }
+    .testimonialBox {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;  /* Smooth fade-in and fade-out effect */
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
+      width: fit-content;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      padding: 40px;
+      border-radius: 12px;
+      gap: 20px;
+    }
+    .testimonialContainer {
+      /* position: relative; */
+      /* max-width: 100%; */
+      /* max-width: 800px; */
+      /* margin: 0 auto; */
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+  }
     .formContainer{
       display: flex;
       flex-direction: column;
