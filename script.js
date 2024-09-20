@@ -137,9 +137,9 @@ function prevTestimonial() {
 // Add event listeners for buttons
 document.querySelector('.prev').addEventListener('click', prevTestimonial);
 document.querySelector('.next').addEventListener('click', nextTestimonial);
-// const autoSlide = setInterval(() => {
-//   nextTestimonial();
-// }, 3000);
+const autoSlide = setInterval(() => {
+  nextTestimonial();
+}, 3000);
 // Swipe detection
 const testimonialContainer = document.querySelector('.testimonialWrapper');
 testimonialContainer.addEventListener('touchstart', (e) => startX = e.touches[0].clientY);  // Changed to Y for vertical swipe
