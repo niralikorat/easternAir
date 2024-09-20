@@ -783,7 +783,7 @@ align-items: center;
   transform: translateX(100%);  
   transition: transform 0.5s ease;  
   background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
-  padding: 40px;
+  /* padding: 40px; */
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -803,7 +803,8 @@ align-items: center;
 }
 
 .testimonialPara{
-  max-width: 800px;
+  /* max-width: 800px; */
+  padding: 20px;
   text-align: start;
 }
 .testimonialBox {
@@ -829,9 +830,18 @@ align-items: center;
 /* .testimonialBox {
  
 } */
+ .testimoniPerson{
+  /* padding: 20x 20px; */
+
+margin-left: 20px;
+ }
+ .testimonialBox div{
+  padding: 0px 20px;
+ }
  .comma{
   opacity: 0.5;
   max-width: 48px;
+  padding: 20px;
  }
 
   .checked {
@@ -981,8 +991,36 @@ align-items: center;
 }
 
   @media (max-width:700px){
+    .testimonialBox {
+      position: absolute;
+      width: 100%;
+      height: 420px;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);  
+      transition: transform 0.5s ease;  
+      background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
+      
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 20px;
+    
+    }
+    
+    .testimonialWrapper {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      overflow: hidden;  
+      /* align-self: ; */
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+    }
     .testimonialPara{
-      max-width: 320px;
+      /* max-width: 320px; */
+      padding: 20px;
       /* text-align: center; */
     }
     .testimonialNavContainer{
