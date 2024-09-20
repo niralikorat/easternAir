@@ -308,6 +308,11 @@ border-radius: 16px;
   .heading-2{
     font-size: 48px;
 max-width: fit-content;
+background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
+-webkit-background-clip: text; 
+-webkit-text-fill-color: transparent; 
+background-clip: text; 
+color: transparent; 
 
   }
   .animateShowUp{
@@ -422,13 +427,12 @@ max-width: fit-content;
     background-color: rgb(255, 255, 255);
     /* filter: brightness(1.75); */
   }
-  .serviceContainer{
+  /* .serviceContainer{
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
-    /* justify-content: center; */
-    /* justify-content: space-evenly; */
-  }
+  
+  } */
   .heading-2{
     font-size: 32px;
 max-width: fit-content;
@@ -462,9 +466,10 @@ max-width: fit-content;
 }
   .serviceContainer{
     display: flex;
-   flex-wrap: wrap;
+   flex-direction: row;
     gap: 40px;
-    justify-content: center;
+    justify-content: start;
+    overflow-x: scroll;
     /* justify-content: space-evenly; */
   }
   .eachserviceBox{
@@ -476,7 +481,7 @@ max-width: fit-content;
     gap: 40px;
     /* justify-content: space-between; */
     /* padding: 40px; */
-    max-width: 360px;
+    min-width: 360px;
     border-radius: 12px;
     position: relative; /* Ensure the box has a relative positioning for better control */
     overflow: hidden; /* Ensure the border is clipped to the box */
@@ -506,7 +511,7 @@ max-width: fit-content;
     /* padding-left: 0px; */
   }
   .serviceIcon{
-    max-width:240px;
+    max-width:200px;
     /* padding: 20px; */
     /* background-color: rgba(113, 165, 36,0.9); */
     /* max-width: 60px; */
@@ -523,11 +528,7 @@ max-width: fit-content;
 
   font-size: 28px; 
  
-  background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
-  -webkit-background-clip: text; /* For WebKit browsers */
-  -webkit-text-fill-color: transparent; /* Makes the text color transparent so the background shows through */
-  background-clip: text; /* For non-WebKit browsers */
-  color: transparent; /* Fallback color in case gradient doesn’t work */
+
 
 
 
@@ -657,7 +658,7 @@ align-items: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 100px;
   }
   .howItWorksContainer{
     width: 50%;
@@ -1011,6 +1012,14 @@ margin-left: 20px;
 }
 
   @media (max-width:700px){
+    .ctaText{
+      font-size: 32px;
+      background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
+      -webkit-background-clip: text; /* For WebKit browsers */
+      -webkit-text-fill-color: transparent; /* Makes the text color transparent so the background shows through */
+      background-clip: text; /* For non-WebKit browsers */
+      color: transparent; /* Fallback color in case gradient doesn’t work */
+    }
     .testimonialBox {
       position: absolute;
       width: 100%;
@@ -1131,14 +1140,13 @@ margin-left: 20px;
       padding: 8px;
       width: 95%;
     }
-    .serviceContainer{
+    /* .serviceContainer{
       display: flex;
       flex-wrap: wrap;
       gap: 48px;
-      /* justify-content: center; */
-      /* align-items: start; */
+
       justify-content:flex-start;
-    }
+    } */
     .mockUpBox{
       width: 100%;
    
@@ -1351,11 +1359,11 @@ margin-left: 20px;
 .footer {
   background-color: #fff; /* Darkish transparent background */
   color: #fff;
-  padding: 40px 20px;
+  padding: 40px 260px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   border-top: 1px solid rgba(190, 190, 190, 0.575);;
 }
 
