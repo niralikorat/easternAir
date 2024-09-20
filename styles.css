@@ -940,7 +940,7 @@ margin-left: 20px;
   .clientLogoSection{
     display: flex;
     flex-direction: row-reverse;
-    background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%);
+    background-color: #f8f8f8d8;
     align-items: center;
     gap: 80px;
   }
@@ -1168,7 +1168,7 @@ margin-left: 20px;
     .clientLogoSection{
       display: flex;
       flex-direction: column;
-      background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%);
+      /* background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%); */
       align-items: center;
       gap: 80px;
     }
@@ -1254,7 +1254,7 @@ margin-left: 20px;
     .clientLogoSection{
       display: flex;
       flex-direction: column;
-      background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%);
+      /* background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%); */
       align-items: center;
       gap: 80px;
     }
@@ -1329,7 +1329,7 @@ margin-left: 20px;
     .clientLogoSection{
       display: flex;
       flex-direction: column;
-      background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%);
+      /* background-color: ( rgb(255, 255, 255) 70%, rgba(69,247,136,1) 30%); */
       align-items: center;
       gap: 80px;
     }
