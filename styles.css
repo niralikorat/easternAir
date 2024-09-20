@@ -463,9 +463,9 @@ max-width: fit-content;
   .serviceContainer{
     display: flex;
    flex-wrap: wrap;
-    gap: 16px;
+    gap: 40px;
     justify-content: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
   }
   .eachserviceBox{
     display: flex;
@@ -899,10 +899,12 @@ margin-left: 20px;
     font-weight: bold;
     font-size: 18px;
     user-select: none;
-    background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
+    /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
+    background-color: rgb(235, 235, 235);
     border-radius: 100%;
 }
 .prev {
+  background-color: rgb(235, 235, 235);
   cursor: pointer;
   /* position: absolute; */
   /* top: 50%; */
@@ -914,7 +916,7 @@ margin-left: 20px;
   font-weight: bold;
   font-size: 18px;
   user-select: none;
-  background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
+  /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
   border-radius: 100%;
   box-shadow: 2px gray;
 }
