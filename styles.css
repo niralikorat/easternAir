@@ -771,7 +771,7 @@ align-items: center;
     justify-content: center;
     gap: 100px;
     /* justify-content: center; */
-    background-color: #fff;
+    background-color: #f8f8f8d8;
     /* align-items: center; */
   }
   .testimonialContainer {
@@ -909,11 +909,11 @@ margin-left: 20px;
     font-size: 18px;
     user-select: none;
     /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(255, 255, 255);
     border-radius: 100%;
 }
 .prev {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
   /* position: absolute; */
   /* top: 50%; */
@@ -952,7 +952,7 @@ margin-left: 20px;
   .clientLogoSection{
     display: flex;
     flex-direction: row-reverse;
-    background-color: #f8f8f8d8;
+    background-color: #fff;
     align-items: center;
     gap: 80px;
   }
