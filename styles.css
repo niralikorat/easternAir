@@ -615,7 +615,7 @@ align-items: center;
 
   .cta{
 
-    background: linear-gradient(90deg, rgba(25, 25, 249, 0.6) 11%, rgba(0, 255, 96, 0.5) 100%);
+    /* background: linear-gradient(90deg, rgba(25, 25, 249, 0.6) 11%, rgba(0, 255, 96, 0.5) 100%); */
 /* padding: 120px 260px; */
     display: flex;
     flex-direction: column;
@@ -623,9 +623,18 @@ align-items: center;
 align-items: center;
     gap: 40px;
     color: black;
+    background-color: #f8f8f8d8;
     /* max-width: 800px; */
   /* align-items: center; */
 
+  }
+  .ctaText{
+    font-size: 60px;
+    background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
+    -webkit-background-clip: text; /* For WebKit browsers */
+    -webkit-text-fill-color: transparent; /* Makes the text color transparent so the background shows through */
+    background-clip: text; /* For non-WebKit browsers */
+    color: transparent; /* Fallback color in case gradient doesn’t work */
   }
   .ctaBox{
 
