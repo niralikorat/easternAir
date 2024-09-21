@@ -164,11 +164,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Scroll buttons functionality
   scrollLeftBtn.addEventListener('click', () => {
-    serviceContainer.scrollBy({ left: -400, behavior: 'smooth' });
+    serviceContainer.scrollBy({ left: -340, behavior: 'smooth' });
   });
 
   scrollRightBtn.addEventListener('click', () => {
-    serviceContainer.scrollBy({ left: 400, behavior: 'smooth' });
+    serviceContainer.scrollBy({ left: 340, behavior: 'smooth' });
   });
 
   // Function to scroll slowly

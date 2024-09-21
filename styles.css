@@ -430,6 +430,9 @@ color: transparent;
     background-color: rgb(255, 255, 255);
     /* filter: brightness(1.75); */
   }
+  .serviceSection{
+    padding: 80px 20px;
+  }
   /* .serviceContainer{
     display: flex;
     flex-wrap: wrap;
@@ -481,7 +484,7 @@ max-width: fit-content;
     flex-direction: column;
     background-color: #f8f8f8d8;
     gap: 40px;
-    min-width: 360px;
+    min-width: 320px;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
