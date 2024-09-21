@@ -164,11 +164,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Scroll buttons functionality
   scrollLeftBtn.addEventListener('click', () => {
-    serviceContainer.scrollBy({ left: -340, behavior: 'smooth' });
+    serviceContainer.scrollBy({ left: -348, behavior: 'smooth' });
   });
 
   scrollRightBtn.addEventListener('click', () => {
-    serviceContainer.scrollBy({ left: 340, behavior: 'smooth' });
+    serviceContainer.scrollBy({ left: 348, behavior: 'smooth' });
   });
 
   // Function to scroll slowly
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !hasScrolled) {
-        slowScroll(serviceContainer, 1600, 200); // Scroll 400px over 2 seconds
+        slowScroll(serviceContainer, 6000, 6000); // Scroll 400px over 2 seconds
         hasScrolled = true; // Prevent future auto-scrolls
       }
     });
