@@ -458,38 +458,75 @@ max-width: fit-content;
   }
 
 
-  /* section service */
-.serviceSection{
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  gap: 100px;
-  /* height: 70vh; */
-  /* background-color: #d2daec57; */
-}
-  .serviceContainer{
+  .serviceSection {
     display: flex;
-   flex-direction: row;
+    flex-direction: column;
+    gap: 100px;
+    position: relative; /* For positioning the buttons */
+    padding-right: 0;
+  }
+  
+  .serviceContainer {
+    display: flex;
     gap: 40px;
     justify-content: start;
     overflow-x: scroll;
-    /* justify-content: space-evenly; */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
-  .eachserviceBox{
+  
+  .eachserviceBox {
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(218, 218, 218); */
     background-color: #f8f8f8d8;
-    background-size: 0% 0%;
     gap: 40px;
-    /* justify-content: space-between; */
-    /* padding: 40px; */
     min-width: 360px;
     border-radius: 12px;
-    position: relative; /* Ensure the box has a relative positioning for better control */
-    overflow: hidden; /* Ensure the border is clipped to the box */
-    border: 2px solid transparent; 
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
   }
+  .scrollBtnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 20px;
+    align-self: flex-start;
+    /* margin-bottom: 20px; */
+  }
+  .scroll-btn {
+    background-color: #20994d;
+    
+    cursor: pointer;
+    /* position: absolute;
+    top: 50%; */
+    border-radius: 100%;
+    transform: translateY(-50%);
+    border: none;
+    width: 24px;
+    height: 24px;
+    /* margin-top: -22px; */
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.658) 11%, rgba(0, 255, 98, 0.603) 100%); */
+  }
+  
+  .scroll-left {
+    /* left: 10px; */
+  }
+  
+  .scroll-right {
+    /* right: 10px; */
+  }
+
+  .serviceContainer::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, and Opera */
+  }  
  
   /* .eachserviceBox:hover{
     background-size: 100% 100%;
@@ -773,7 +810,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    gap: 60px;
     /* justify-content: center; */
     background-color: #f8f8f8d8;
     /* align-items: center; */
@@ -912,12 +949,12 @@ margin-left: 20px;
     font-weight: bold;
     font-size: 18px;
     user-select: none;
-    /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
-    background-color: rgb(255, 255, 255);
+    /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.658) 11%, rgba(0, 255, 98, 0.603) 100%); */
+    background-color: #20994d;
     border-radius: 100%;
 }
 .prev {
-  background-color: rgb(255, 255, 255);
+  background-color: #20994d;
   cursor: pointer;
   /* position: absolute; */
   /* top: 50%; */
@@ -929,7 +966,7 @@ margin-left: 20px;
   font-weight: bold;
   font-size: 18px;
   user-select: none;
-  /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
+  /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.658) 11%, rgba(0, 255, 98, 0.603) 100%); */
   border-radius: 100%;
   box-shadow: 2px gray;
 }

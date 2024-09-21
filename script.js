@@ -151,3 +151,68 @@ testimonialContainer.addEventListener('touchend', (e) => {
 
 // Initial display
 showTestimonial(currentIndex);
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const serviceContainer = document.querySelector('.serviceContainer');
+  const scrollLeftBtn = document.querySelector('.scroll-left');
+  const scrollRightBtn = document.querySelector('.scroll-right');
+  let hasScrolled = false; // To track if it has auto-scrolled already
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  // Scroll buttons functionality
+  scrollLeftBtn.addEventListener('click', () => {
+    serviceContainer.scrollBy({ left: -400, behavior: 'smooth' });
+  });
+
+  scrollRightBtn.addEventListener('click', () => {
+    serviceContainer.scrollBy({ left: 400, behavior: 'smooth' });
+  });
+
+  // Function to scroll slowly
+  function slowScroll(element, scrollAmount, duration) {
+    const step = scrollAmount / (duration / 10); // Calculate the step size
+    let currentScroll = 0;
+    const interval = setInterval(() => {
+      element.scrollBy({ left: step });
+      currentScroll += Math.abs(step);
+      if (currentScroll >= Math.abs(scrollAmount)) {
+        clearInterval(interval); // Stop scrolling once the desired amount is reached
+      }
+    }, 10); // Scroll every 10 milliseconds
+  }
+
+  // Intersection Observer to auto-scroll when in view for the first time
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasScrolled) {
+        slowScroll(serviceContainer, 1600, 200); // Scroll 400px over 2 seconds
+        hasScrolled = true; // Prevent future auto-scrolls
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(document.querySelector('.serviceSection'));
+
+  // Touch Scroll Functionality
+  serviceContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX; // Get the touch start position
+  });
+
+  serviceContainer.addEventListener('touchmove', (e) => {
+    touchEndX = e.changedTouches[0].screenX; // Update the touch end position during the move
+  });
+
+  serviceContainer.addEventListener('touchend', () => {
+    const distance = touchEndX - touchStartX;
+    if (distance > 50) {
+      // Swipe right
+      serviceContainer.scrollBy({ left: -400, behavior: 'smooth' });
+    } else if (distance < -50) {
+      // Swipe left
+      serviceContainer.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  });
+});
