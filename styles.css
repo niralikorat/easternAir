@@ -520,7 +520,7 @@ max-width: fit-content;
     /* margin-bottom: 20px; */
   }
   .scroll-btn {
-    background-color:#00ff5e96;
+    background-color:#00a13b;
  
     
     cursor: pointer;
@@ -979,11 +979,11 @@ margin-left: 20px;
     font-size: 18px;
     user-select: none;
     /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.658) 11%, rgba(0, 255, 98, 0.603) 100%); */
-    background-color:#00a13b96;
+    background-color:#00a13b;
     border-radius: 100%;
 }
 .prev {
-  background-color:#00ff5e96;
+  background-color:#00a13b;
   cursor: pointer;
   /* position: absolute; */
   /* top: 50%; */
