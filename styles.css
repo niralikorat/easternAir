@@ -479,7 +479,10 @@ max-width: fit-content;
     display: none;
   }
   }
-
+a{
+  text-decoration: none;
+  color: #000;
+}
 
   .serviceSection {
     display: flex;
