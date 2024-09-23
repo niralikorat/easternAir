@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !hasScrolled) {
-        slowScroll(serviceContainer, 6000, 6000); // Scroll 400px over 2 seconds
+        slowScroll(serviceContainer, 6000, 500); // Scroll 400px over 2 seconds
         hasScrolled = true; // Prevent future auto-scrolls
       }
     });

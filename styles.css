@@ -427,7 +427,7 @@ color: transparent;
     padding: 80px 20px;
     display: flex;
     /* justify-content: center; */
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     /* filter: brightness(1.75); */
   }
   .serviceSection{
@@ -692,16 +692,16 @@ align-items: center;
   }
   .howItWorksSection{
 
-    background-color: #fff;
+    /* background-color: #fff; */
     
-    /* background:rgba(134, 134, 134, 0.103), url('bgHowItWorks.jpg'); */
-    
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(255, 255, 255, 0.808), rgb(255, 255, 255)), 
+            url('https://img.freepik.com/free-photo/3d-background-with-white-cubes_23-2150473009.jpg?t=st=1727068427~exp=1727072027~hmac=fe86e02aa51fc40c76f2a431089da2f459f472cc4cdee2c82c63b1d082a09031&w=1380');
+background-size: cover;
+background-position: center;
     display: flex;
     flex-direction: column;
     gap: 100px;
+  
   }
   .howItWorksContainer{
     width: 50%;
@@ -709,6 +709,7 @@ align-items: center;
     /* flex-wrap: wrap; */
     flex-direction: column;
     gap: 40px;
+    
   
   }
 
@@ -722,6 +723,7 @@ align-items: center;
     border: 1px solid rgba(110, 113, 119, 0.4);
     padding: 60px;
     border-radius: 25px;
+    box-shadow: 6px 6px 6px 6px solid grey;
   }
   .mockUpBox{
     /* width: 36%; */
