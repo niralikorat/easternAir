@@ -216,3 +216,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / documentHeight) * 100;
+
+      // Select the complete div
+      const completeDiv = document.querySelector('.complete');
+
+      // Set the width of the complete div based on scroll percentage
+      completeDiv.style.width = `${scrollPercent}%`;
+
+      // Add or remove the 'scrolling' class based on scroll percentage
+      if (scrollPercent > 0) {
+          completeDiv.classList.add('scrolling');
+      } else {
+          completeDiv.classList.remove('scrolling');
+      }
+  });
+});
+
