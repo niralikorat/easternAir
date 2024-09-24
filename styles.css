@@ -269,6 +269,23 @@ margin-bottom: 12px;
     margin-top: 12px;
     /* box-shadow: 2px 2px 2px 2px gray; */
   }
+  .btn-6{
+    background: #fff;
+    padding: 18px 36px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: #10219a;
+    border: 2px solid white;
+    /* width: 100%; */
+    border-radius: 8px;
+    text-align: center;
+    max-width: 180px;
+  }
+  .btn-6:hover{
+    background-color: #10219a;
+    color: #fff ;
+  }
   .btn-5:hover{
 border-radius: 16px;
   }
@@ -691,30 +708,35 @@ align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-align-items: center;
+align-items: start;
     gap: 40px;
     color: black;
-    background-color: #f8f8f8d8;
+    background-color: #10219a;
+    /* background-image: url('https://img.freepik.com/premium-vector/man-carrying-box-with-word-delivery-it_554682-66.jpg?w=826'); */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
     /* max-width: 800px; */
   /* align-items: center; */
 
   }
   .ctaText{
     font-size: 60px;
-    background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
-    -webkit-background-clip: text; /* For WebKit browsers */
-    -webkit-text-fill-color: transparent; /* Makes the text color transparent so the background shows through */
-    background-clip: text; /* For non-WebKit browsers */
-    color: transparent; /* Fallback color in case gradient doesn’t work */
+    /* background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%); */
+    /* -webkit-background-clip: text;  */
+    /* -webkit-text-fill-color: transparent;  */
+    /* background-clip: text;  */
+    color: white; 
   }
   .ctaBox{
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 12px;
-    text-align: center;
+    text-align: start;
   
   }
   .howItWorksSection{
@@ -857,11 +879,13 @@ background-position: center;
     gap: 40px;
     align-items: start;
     width: 100%;
+
 }
 .testimonialNavContainer{
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-top: 20px;
 }
 .testimonialBox {
   position: absolute;
@@ -877,7 +901,9 @@ background-position: center;
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
+  /* border-bottom: 1px solid black; */
+  /* background-color: #00a13b; */
 
 }
 
@@ -890,11 +916,13 @@ background-position: center;
  display: flex;
  flex-direction: column;
  gap: 20px;
+ /* border-bottom: 1px solid black; */
 }
 
 .testimonialPara{
   /* max-width: 800px; */
   padding: 20px;
+  /* padding-left: 0; */
   text-align: start;
 }
 .testimonialBox {
@@ -927,48 +955,19 @@ margin-left: 20px;
  }
  .testimonialBox div{
   padding: 0px 20px;
+  /* padding-left: 0; */
  }
  .comma{
   opacity: 0.8;
   max-width: 48px;
   padding: 20px;
+  padding-left: 0;
  }
 
   .checked {
     color: #20994d;
   }
-  /* .testimonialBox{
-    display: flex;
-    background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    min-width: 100%; 
-    transition: transform 0.5s ease; 
 
-    border-radius: 24px;
-  } */
-  /* .testimonialBox{
-    display: flex;
-
-    background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 100%; 
-    transition: transform 0.5s ease; 
-    padding: 40px;
-
-    border-radius: 24px;
-    cursor: pointer;
-  } */
-  /* .testimonialBox:hover{
-    scale: 1.1;
-    transition: 0.2s ease-out;
-    background-color: ;
-  } */
    .next {
     cursor: pointer;
     /* position: absolute; */
@@ -1097,41 +1096,19 @@ margin-left: 20px;
       align-self: center;
       /* margin-bottom: 20px; */
     }
+    .cta{
+      align-items: center;
+    }
     .ctaText{
-      font-size: 32px;
-      background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%);
-      -webkit-background-clip: text; /* For WebKit browsers */
-      -webkit-text-fill-color: transparent; /* Makes the text color transparent so the background shows through */
-      background-clip: text; /* For non-WebKit browsers */
-      color: transparent; /* Fallback color in case gradient doesn’t work */
+      font-size: 42px;
+      /* background: linear-gradient(90deg, rgba(25, 25, 249, 1) 11%, rgba(0, 255, 96, 1) 100%); */
+     color: #fff;
+     text-align: center;
     }
-    .testimonialBox {
-      position: absolute;
-      width: 100%;
-      height: 420px;
-      top: 0;
-      left: 0;
-      transform: translateX(100%);  
-      transition: transform 0.5s ease;  
-      /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
-      
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      gap: 20px;
-    
+    .ctaBox{
+      align-items: center;
     }
-    
-    .testimonialWrapper {
-      position: relative;
-      width: 100%;
-      height: 420px;
-      overflow: hidden;  
-      /* align-self: ; */
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
-    }
+   
     .testimonialPara{
       /* max-width: 320px; */
       padding: 20px;
@@ -1438,13 +1415,52 @@ margin-left: 20px;
       align-items: center;
       gap: 80px;
     }
+    .testimonialBox {
+      position: absolute;
+      width: 100%;
+      height: 400px;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);  
+      transition: transform 0.5s ease;  
+      /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
+      /* padding: 40px; */
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 20px;
+      /* border-radius: 12px; */
+      /* border-bottom: 1px solid black; */
+      /* background-color: #00a13b; */
+    
+    }
+    
+    .testimonialWrapper {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;  
+      /* align-self: ; */
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     /* border-bottom: 1px solid black; */
+    }
+    .footer{
+      padding: 40px 80px;
+    }
+    .footer-container {
+        flex-direction: row;
+        align-items: start;
+    }
+    
   }
 
   
 .footer {
   background-color: #fff; /* Darkish transparent background */
   color: #fff;
-  padding: 40px 260px;
+  padding: 40px 80px;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -1514,12 +1530,44 @@ margin-left: 20px;
   .footer-container{
       align-items: start;
       /* justify-content: ; */
+      flex-direction: column;
   }
   .footer-column {
       flex: 1 1 200px;
       margin: 10px 20px;
       min-width: 200px;
       align-items: start;
+  }
+  .testimonialBox {
+    position: absolute;
+    width: 100%;
+    height: 460px;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);  
+    transition: transform 0.5s ease;  
+    /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
+    /* padding: 40px; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    /* border-radius: 12px; */
+    /* border-bottom: 1px solid black; */
+    /* background-color: #00a13b; */
+  
+  }
+  
+  .testimonialWrapper {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    overflow: hidden;  
+    /* align-self: ; */
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   /* border-bottom: 1px solid black; */
   }
 }
 
@@ -1586,10 +1634,7 @@ margin-left: 20px;
 
 /* Responsive Design */
 @media screen and (max-width: 1000px) {
-  .footer-container {
-      flex-direction: column;
-      align-items: start;
-  }
+
 
   .footer-column {
       margin: 20px 0;
@@ -1601,7 +1646,7 @@ margin-left: 20px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
   .logo{
     max-width: 48px;
   }
@@ -1627,6 +1672,37 @@ margin-left: 20px;
 
   .footer-bottom {
       font-size: 12px;
+  }
+  .testimonialBox {
+    position: absolute;
+    width: 100%;
+    height: 580px;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);  
+    transition: transform 0.5s ease;  
+    /* background: linear-gradient(90deg, rgba(55, 55, 247, 0.247) 11%, rgba(0, 255, 98, 0.219) 100%); */
+    /* padding: 40px; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    /* border-radius: 12px; */
+    /* border-bottom: 1px solid black; */
+    /* background-color: #00a13b; */
+  
+  }
+  
+  .testimonialWrapper {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    overflow: hidden;  
+    /* align-self: ; */
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   /* border-bottom: 1px solid black; */
   }
 }
 
