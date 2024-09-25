@@ -1098,6 +1098,12 @@ margin-left: 20px;
 }
 
   @media (max-width:700px){
+    .para-2{
+      font-size: 18px;
+      color:rgb(10, 10, 10) ;
+      line-height: 28px;
+     
+    }
     .howItWorksImg{
       max-width: 100%;
       z-index: 20;
